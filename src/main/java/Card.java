@@ -32,7 +32,9 @@ public class Card {
 	 *                  containing the point value of the card
 	 */
 	public Card(String cardRank, String cardSuit, int cardPointValue) {
-        // YOUR CODE HERE
+        this.rank = cardRank;
+        this.suit = cardSuit;
+        this.pointValue = cardPointValue;
 	}
 
 
@@ -41,8 +43,7 @@ public class Card {
 	 * @return this Card's suit.
 	 */
 	public String getSuit() {
-        // YOUR CODE HERE
-        return "";
+        return this.suit;
    }
 
 	/**
@@ -50,8 +51,7 @@ public class Card {
 	 * @return this Card's rank.
 	 */
 	public String getRank() {
-        // YOUR CODE HERE
-        return "";
+        return this.rank;
 	}
 
    /**
@@ -59,8 +59,7 @@ public class Card {
 	 * @return this Card's point value.
 	 */
 	public int getPointValue() {
-        // YOUR CODE HERE
-        return -1;
+        return this.pointValue;
 	}
 
 	/** Compare this card with the argument.
@@ -70,8 +69,9 @@ public class Card {
 	 *         false otherwise.
 	 */
 	public boolean equals(Card otherCard) {
-		// YOUR CODE HERE
-        return false;
+        return this.rank.equals(otherCard.rank) && 
+        this.suit.equals(otherCard.suit) && 
+        this.pointValue == otherCard.pointValue;
 	}
 
 	/**
@@ -86,7 +86,6 @@ public class Card {
 	 */
 	@Override
 	public String toString() {
-        // YOUR CODE HERE
-        return "";
+        return this.rank + " of " + this.suit;
 	}
 }
